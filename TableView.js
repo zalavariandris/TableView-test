@@ -19,7 +19,7 @@ if (Meteor.isClient) {
 if(Meteor.isServer){
   Meteor.methods({
     'testServerConnection':function(){
-      console.log("ANDRIS ********** connection server test: ", called);
+      console.log("ANDRIS ********** connection server test: ", "CALLED");
     }
   });
 }
