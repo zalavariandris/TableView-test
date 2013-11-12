@@ -1,4 +1,5 @@
 collection = new Meteor.Collection('test-collection');
+console.log("TableView.js", "STARTED");
 if (Meteor.isClient) {
   Template.body.collection = function() {
     return collection.find( {} );
