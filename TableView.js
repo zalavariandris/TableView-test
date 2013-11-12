@@ -1,6 +1,5 @@
 collection = new Meteor.Collection('test-collection');
 if (Meteor.isClient) {
-
   Template.body.collection = function() {
     return collection.find( {} );
   };
@@ -13,6 +12,14 @@ if (Meteor.isClient) {
     'click [name=add]': function(event, template) {
       var cursor = template.data;
       cursor.collection.insert( {name: '-name-'} );
+    }
+  });
+}
+
+if(Meteor.isServer){
+  Meteor.methods({
+    'testServerConnection':function(){
+      console.log("ANDRIS ********** connection server test: ", called);
     }
   });
 }
