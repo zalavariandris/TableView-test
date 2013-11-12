@@ -1,0 +1,25 @@
+<head>
+  <title>heroku-mongolib-test</title>
+</head>
+
+<body>
+	{{> body}}
+</body>
+
+<template name="body">
+	{{>TableView collection}}
+</template>
+
+<template name="TableView">
+	<header>
+  	<h1>TableView</h1>
+  </header>
+  <section>
+  	<button name="add">add</button>
+	  <ul>
+		  {{#each this}}
+				<li> <span>{{name}}</span> <button name="remove">remove</button> </li>
+		  {{/each}}
+	  <ul>
+  </section>
+</template>
